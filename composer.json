@@ -1,0 +1,54 @@
+{
+    "name": "jobcerto/laravel-more-commands",
+    "description": "Add More Make Commands to Laravel",
+    "keywords": [
+        "jobcerto",
+        "laravel-more-commands"
+    ],
+    "homepage": "https://github.com/jobcerto/laravel-more-commands",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Eduardo Geschonke",
+            "email": "edu@jobcerto.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jobcerto\\LaravelMoreCommands\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jobcerto\\LaravelMoreCommands\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jobcerto\\LaravelMoreCommands\\LaravelMoreCommandsServiceProvider"
+            ],
+            "aliases": {
+                "LaravelMoreCommands": "Jobcerto\\LaravelMoreCommands\\LaravelMoreCommandsFacade"
+            }
+        }
+    }
+}
